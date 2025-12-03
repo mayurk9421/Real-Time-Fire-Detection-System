@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Detection — Fire & Smoke</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <header class="header sticky">
+    <div class="brand">
+      <div class="logo">FD</div>
+      <div><p class="title">Detection</p></div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container" data-aos="fade-up">
+        <h2>Upload Video for Detection</h2>
+        <div class="upload-area">
+          <input id="videoInput" class="input" type="file" accept="video/*"/>
+          <div style="margin-top:14px;display:flex;gap:12px;align-items:center">
+            <button id="uploadBtn" class="btn">Upload & Process</button>
+            <div class="muted" style="font-size:13px">Supported: mp4, mov, avi — recommended < 30 MB</div>
+          </div>
+
+          <div class="progress-wrap" style="margin-top:12px">
+            <div style="background:rgba(255,255,255,0.03);height:10px;border-radius:8px;overflow:hidden">
+              <div id="progressBar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--accent1),var(--accent2))"></div>
+            </div>
+          </div>
+
+          <div id="loader" class="loader"></div>
+
+          <div id="resultBox" style="margin-top:12px"></div>
+
+          <div class="video-wrap" style="margin-top:12px">
+            <div id="overlayContainer" style="position:absolute;inset:0;pointer-events:none;z-index:5"></div>
+            <video id="processedVideo" controls style="width:100%;border-radius:10px;display:none;background:#000"></video>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+            <div style="flex:1;min-width:220px">
+              <canvas id="chartCanvas" width="300" height="200"></canvas>
+            </div>
+            <div style="min-width:220px">
+              <div class="card">
+                <h3>Detection Summary</h3>
+                <p class="muted">Confidence levels and timestamps will be shown here after processing.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="fab" class="fab" title="Home"><a href="index.html" style="color:#061018;text-decoration:none"><i class="fa fa-home"></i></a></div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

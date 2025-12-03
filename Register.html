@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Register — Fire Detection</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <header class="header sticky">
+    <div class="brand">
+      <div class="logo">FD</div>
+      <div><p class="title">Real-Time Fire & Smoke Detection</p></div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="detect.html">Detection</a>
+    </nav>
+  </header>
+
+  <main>
+    <section style="padding:40px 20px">
+      <div class="auth-wrap" data-aos="fade-up">
+        <div class="auth-title">Create Account</div>
+        <div class="muted">Fill details to create your account (UI only)</div>
+
+        <input class="input-large" id="regName" placeholder="Full Name" />
+        <input class="input-large" id="regEmail" placeholder="Email" />
+        <input class="input-large" id="regPass" placeholder="Password" type="password" />
+        <button style="width:100%;margin-top:12px" onclick="alert('Account created (UI only)')">Register</button>
+
+        <div style="margin-top:12px;text-align:center" class="muted">Already registered? <a href="login.html" style="color:var(--accent1)">Login</a></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

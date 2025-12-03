@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Real-Time Fire & Smoke Detection</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/a2d9a7b2f0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- particles + smoke -->
+  <div id="particles-js"></div>
+  <div class="smoke">
+    <!-- simple SVG smoke waves -->
+    <svg viewBox="0 0 1200 600" preserveAspectRatio="none">
+      <defs><linearGradient id="g1"><stop offset="0%" stop-color="#fff"/><stop offset="100%" stop-color="#b2d8ff"/></linearGradient></defs>
+      <path d="M0,300 C250,380 450,220 700,300 C950,380 1150,240 1200,300 L1200 600 0 600 Z" fill="url(#g1)" opacity="0.06">
+        <animate attributeName="d" dur="12s" repeatCount="indefinite"
+          values="M0,300 C250,380 450,220 700,300 C950,380 1150,240 1200,300 L1200 600 0 600 Z;
+                  M0,320 C200,260 500,360 700,320 C950,280 1150,360 1200,340 L1200 600 0 600 Z;
+                  M0,300 C250,380 450,220 700,300 C950,380 1150,240 1200,300 L1200 600 0 600 Z"/>
+      </path>
+    </svg>
+  </div>
+
+  <header class="header sticky">
+    <div class="brand">
+      <div class="logo">FD</div>
+      <div>
+        <p class="title">Real-Time Fire & Smoke Detection</p>
+        <div class="muted" style="font-size:12px">AI/ML Mini Project</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="detect.html">Detection</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <button id="themeBtn" class="theme-toggle"><i class="fa fa-moon"></i></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="hero">
+      <div class="hero-left" data-aos="fade-right">
+        <span class="kicker">AI + Computer Vision</span>
+        <h1 class="hero-title">Detect Fire & Smoke — <span style="color:var(--accent1)">Real-Time</span></h1>
+        <p class="lead">Upload recorded clips or use live camera to detect fire & smoke using a trained deep-learning model (YOLO/CNN). Annotated output videos with bounding boxes are produced.</p>
+        <div class="hero-actions">
+          <a href="detect.html"><button class="btn">Try Detection</button></a>
+          <a href="#about"><button class="btn secondary">Learn More</button></a>
+        </div>
+
+        <div class="row" style="margin-top:22px">
+          <div class="card" data-aos="fade-up"><h3>Fast</h3><p>Near real-time processing and alerts.</p></div>
+          <div class="card" data-aos="fade-up" data-aos-delay="80"><h3>Accurate</h3><p>Deep learning with frame-level analysis.</p></div>
+          <div class="card" data-aos="fade-up" data-aos-delay="160"><h3>Portable</h3><p>Works with webcams and recorded video files.</p></div>
+        </div>
+      </div>
+
+      <div data-aos="fade-left">
+        <div class="hero-card">
+          <div class="lottie" data-path="https://assets9.lottiefiles.com/packages/lf20_rmnf2udg.json" style="height:240px"></div>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:8px">
+            <div style="flex:1">
+              <div style="font-weight:700">Live Demo</div>
+              <div class="muted">Upload a short clip and view annotated output</div>
+            </div>
+            <a href="detect.html"><button class="btn">Upload</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container" data-aos="fade-up">
+        <h2>About the System</h2>
+        <p class="muted">The backend uses OpenCV and YOLO/CNN models to analyze frames and detect fire or smoke. Detections are localized with bounding boxes and timestamps returned to the frontend for display.</p>
+        <div style="margin-top:18px;display:flex;gap:14px;flex-wrap:wrap">
+          <div class="card" style="min-width:260px"><h3>Model</h3><p>YOLOv8 / custom CNN</p></div>
+          <div class="card" style="min-width:260px"><h3>Libraries</h3><p>OpenCV, NumPy, PyTorch/TensorFlow</p></div>
+          <div class="card" style="min-width:260px"><h3>Backend</h3><p>Flask or FastAPI</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" data-aos="fade-up">
+        <h2>Tech Stack & Credits</h2>
+        <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:12px">
+          <div class="card"><h3>Frontend</h3><p>HTML, CSS, JavaScript</p></div>
+          <div class="card"><h3>Model</h3><p>YOLOv8 / CNN</p></div>
+          <div class="card"><h3>Tools</h3><p>OpenCV, Chart.js, Lottie</p></div>
+          <div class="card"><h3>Credits</h3><p><br>
+        Mr. Mayur Kavathekar 124BT11683<br>
+        <br>
+         Mr. Gaurav Patel 124BT10538<br>
+        <br>
+        Mr. Niranjan Pawar 124BT10878<br>
+        <br>
+        Ms. Sanskruti Raut 124BT11666<br>
+        <br>
+        Ms. Sanjyoti Mahadik 124BT11622 <br>
+        <br>
+        Mr.Vivek Kelkar	124BT10698<br></p></div>
+        </div>
+        <div style="margin-top:18px" class="muted"><p><b></b> <br>
+        
+</p>
+    <p><b>Department:</b> Artificial Intelligence & Machine Learning</p>
+    <p><b>College:</b> Zeal College Of Engineering & Research</p>
+</div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © 2025 — Real-Time Fire & Smoke Detection Project
+    </div>
+  </main>
+
+  <!-- FAB -->
+  <div id="fab" class="fab" title="Go to Detection"><i class="fa fa-video"></i></div>
+
+  <!-- Scripts: AOS, particles, lottie, chart.js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
